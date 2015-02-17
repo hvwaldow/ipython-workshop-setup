@@ -1,0 +1,36 @@
+#!/bin/bash
+
+user=__user__
+inst_home=__instructor_home__
+
+if [ -a lock.notebook ]; then
+    echo "notebook running - killing it"
+    ssh -n -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
+	$user "killall ipython"
+fi
+ssh -n -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
+    $user "source ${inst_home}/pyws/venv/bin/activate;\
+        ipython notebook --pylab=inline --no-browser &>res.txt" &
+touch lock.notebook
+sleep 3
+port=$(ssh -n -o  UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
+    $user "cat res.txt |grep 'The IPython Notebook is running at:' \
+    |sed 's/.*:\([0-9]\{1,\}\)\/$/\1/'")
+
+echo remote port: $port
+
+
+# find free localport
+for (( locport=7777; locport <= 9000; locport++ )); do
+    n=$(netstat -ano|grep $locport)
+    if [ "$n" == "" ]; then
+	echo "found free port: $locport"
+	break
+    else
+	echo "port $locport busy!"
+    fi
+done
+
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
+    -N -f -L $locport:localhost:$port $user
+firefox http://localhost:$locport &
