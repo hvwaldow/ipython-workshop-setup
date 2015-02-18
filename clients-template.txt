@@ -1,0 +1,11 @@
+instructor@server.mydomain.tld
+part01@clab01.mydomain.tld passworD_01 part01@server.domain.ch
+part02@clab02.mydomain.tld passworD_02 part02@server.domain.ch
+part03@clab03.mydomain.tld passworD_03 part03@server.domain.ch
+part04@clab04.mydomain.tld passworD_04 part04@server.domain.ch
+part05@clab05.mydomain.tld passworD_05 part05@server.domain.ch
+personal_laptop dummy_pw part06@server.domain.ch
+personal_laptop dummy_pw part07@server.domain.ch
+personal_laptop summy_pw part08@server.domain.ch
+...
+
