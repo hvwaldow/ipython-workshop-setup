@@ -1,6 +1,9 @@
 Client-server setup for IPython-Notebook based courses
 ======================================================
 
+Rationale
+---------
+
 Quickstart
 ----------
 
