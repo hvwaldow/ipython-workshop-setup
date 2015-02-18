@@ -44,7 +44,7 @@ Quickstart
 	  descriptor in the third column.
 	+ **Fields (columns) are seperated by exactly one space!**
 	+ You can include a line that associates the instructor-account on
-      the [server](#server) with a client-achine account. This way you (as
+      the [server](#server) with a client-machine account. This way you (as
       instructor) will have a setup identical to the participants. Do
       this by adding the appropriate line anywhere below the first
       line.
