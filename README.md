@@ -1,9 +1,7 @@
 Client-server setup for IPython-Notebook based courses
 ======================================================
 
-                                          |
-    -                                     | -                                            
-:-----------------------------------------|:--------------------------------------------
+
  <a href="#rationale">Rationale</a>       |  <a href="#benefits">Benefits</a>           
  <a href="#quickstart">Quickstart</a>     |  <a href="#drawbacks">Drawbacks</a>         
  <a href="#requirements">Requirements</a> |   <a href="#nomenclature">Nomenclature</a>  
