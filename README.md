@@ -1,8 +1,48 @@
 Client-server setup for IPython-Notebook based courses
 ======================================================
 
+|:-----------------------------------------|:--------------------------------------------|
+| <a href="#rationale">Rationale</a>       |  <a href="#benefits">Benefits</a>           |
+| <a href="#quickstart">Quickstart</a>     |  <a href="#drawbacks">Drawbacks</a>         |
+| <a href="#requirements">Requirements</a> |   <a href="#nomenclature">Nomenclature</a>  |
+| <a href="#personal-laptops">Personal Laptops</a>|                                           |
+
+
+
 Rationale
 ---------
+
+Depending on the Python-ecosystem used in a course, it can be tricky
+and time-consuming to set up individually all computers to be used by
+the participants. The client-server setup presented here requires from
+the *clients*, usually the machines in a computer-lab and/or personal
+laptops, no setup that isn't included in most standard modern
+operating systems. The IPython-interpreters and -Notebooks (one for
+each client) are run from one virtual environment (*virtualenv*) on a
+central server. The setup exploits the web-based nature of the IPython
+Notebook in that the participants only interact with a browser.
+
+Benefits
+--------
+
++ Little set-up time required.
+
++ Additional modules for a course are installed once and become
+  immediately accessible to all participants.
+
++ The server-setup can be kept for the next course.
+
++ All participants work in exactly the same environment.
+
+Drawbacks
+---------
+
++ Participants don't necessarily leave with a Python installation on
+  their laptops that would allow them to continue programming after
+  the course. This could be remedied by offering an after-course
+  installation event.
+
+    
 
 Quickstart
 ----------
@@ -75,9 +115,45 @@ Quickstart
 
 
 
-<a name="requirements"></a>Requirements
----------------------------------------
-TODO
+Requirements
+------------
+
+### Clients
+
++ The clients need only basic networking capabilities (ssh), a
+    browser, a POSIX CLI (e.g. bash), and some standard POSIX
+    utilities (sed, ...). All OS X, Linux, FreeBSD, etc. systems
+    should work out-of-the box. Windows clients would probably work
+    with [Cygwin](https://cygwin.com/index.html) installed, but this
+    is not (yet) tested. Let me know in case you find something out!
+
++ The (computer-lab) clients need to be reachable via `ssh` from the server
+
++ You need administrative powers on the (computer-lab) clients to be
+    able to set up accounts.
+
+### Server
+
++ The server needs a modern system-Python (it needs to match the
+    versions of the modules you use in the course and the IPython-Notebook
+	version).    
+	**We assume that the path to the interpreter is `/usr/bin/python2.7`**.
+	If that is not the case, please edit in `mk_server_accounts.sh` the line:
+		```
+		virtualenv -p /usr/bin/python2.7
+		```
+
++ You need administrator rights on that server. You need to have an
+  account that lets you do passwordless `sudo`.
+
++ The server must be reachable via `ssh` by the clients.
+
+
+ Personal Laptops
+-----------------
+
+Instructions and a helper script to set up participants' personal
+laptops are in the works.
 
 
 Nomenclature
