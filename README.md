@@ -145,7 +145,7 @@ Requirements
 + The server must be reachable via `ssh` by the clients.
 
 
- Personal Laptops
+Personal Laptops
 -----------------
 
 Instructions and a helper script to set up participants' personal
