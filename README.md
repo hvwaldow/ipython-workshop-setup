@@ -1,7 +1,7 @@
 Client-server setup for IPython-Notebook based courses
 ======================================================
 
-![setup](setup.pdf)
+![setup](setup.png)
 
 
  | <a href="#rationale">Rationale</a>
