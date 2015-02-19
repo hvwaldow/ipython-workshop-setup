@@ -171,7 +171,7 @@ There should have been created server-accounts for the laptop users.
     account on the server (e.g. `/home/instructor`).
 
 A helper script to set up participants' personal laptops in a more
-automated fashion are in the works.
+automated fashion is in the works.
 
 
 Nomenclature
