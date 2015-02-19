@@ -2,7 +2,14 @@ Client-server setup for IPython-Notebook based courses
 ======================================================
 
 
- | <a href="#rationale">Rationale</a>       |  <a href="#benefits">Benefits</a> | <a href="#quickstart">Quickstart</a>     |  <a href="#drawbacks">Drawbacks</a>     | <a href="#requirements">Requirements</a> |   <a href="#nomenclature">Nomenclature</a> | <a href="#personal-laptops">Personal Laptops</a> |
+ | <a href="#rationale">Rationale</a>
+ | <a href="#benefits">Benefits</a>
+ | <a href="#drawbacks">Drawbacks</a>
+ | <a href="#quickstart">Quickstart</a>
+ | <a href="#requirements">Requirements</a>
+ | <a href="#personal-laptops">Personal Laptops</a>
+ | <a href="#nomenclature">Nomenclature</a> |
+
 
 
 Rationale
@@ -100,9 +107,11 @@ Quickstart
    accounts on [server](#server).
 
 8. Run `clientprep.sh`. This will customize the `startup_template.txt`
-   and copy it as `startup.sh` into each client's $HOME.
+    and copy it as `startup.sh` into each client's $HOME.
 
-9. Test the installation: Log into a [client](#client-m)-account and
+9. Copy your course Notebooks into the home-directories of the server-accounts.
+
+10. Test the installation: Log into a [client](#client-m)-account and
    run `./startup.sh`. this should start an Ipython-Notebook instance
    in the *virtualenv* but on the corresponding
    [server](#server)-participant-account, do the ssh-forwarding thing,
@@ -118,7 +127,7 @@ Requirements
 
 + The clients need only basic networking capabilities (ssh), a
     browser, a POSIX CLI (e.g. bash), and some standard POSIX
-    utilities (sed, ...). All OS X, Linux, FreeBSD, etc. systems
+    utilities (sed, grep, cut, netstat). All OS X, Linux, FreeBSD, etc. systems
     should work out-of-the box. Windows clients would probably work
     with [Cygwin](https://cygwin.com/index.html) installed, but this
     is not (yet) tested. Let me know in case you find something out!
@@ -148,8 +157,21 @@ Requirements
 Personal Laptops
 -----------------
 
-Instructions and a helper script to set up participants' personal
-laptops are in the works.
+There should have been created server-accounts for the laptop users.
+(see the keyword *personal_laptop* in `clients.txt`).
+
+1. Collect ssh public keys from the laptop-users. If necessary have them create a key-pair using `ssh-keygen`.
+
+2. Move each public key to the file `$HOME/.ssh/authorized_keys` in the `$HOME` of respective server-account.
+
+3. Copy `startup_template.txt` to `startup.sh` on each laptop client
+    and replace "__user__" with the respective server-account
+    (e.g. "`part08@cimserv.dept.university.tld`), and replace
+    "__instructor_home__" with the home directory of the instructor
+    account on the server (e.g. `/home/instructor`).
+
+A helper script to set up participants' personal laptops in a more
+automated fashion are in the works.
 
 
 Nomenclature
