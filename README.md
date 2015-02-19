@@ -1,9 +1,6 @@
 Client-server setup for IPython-Notebook based courses
 ======================================================
 
-![setup](setup.png)
-
-
  | <a href="#rationale">Rationale</a>
  | <a href="#benefits">Benefits</a>
  | <a href="#drawbacks">Drawbacks</a>
@@ -12,7 +9,7 @@ Client-server setup for IPython-Notebook based courses
  | <a href="#personal-laptops">Personal Laptops</a>
  | <a href="#nomenclature">Nomenclature</a> |
 
-
+![setup](setup.png)
 
 Rationale
 ---------
