@@ -165,9 +165,9 @@ There should have been created server-accounts for the laptop users.
 2. Move each public key to the file `$HOME/.ssh/authorized_keys` in the `$HOME` of respective server-account.
 
 3. Copy `startup_template.txt` to `startup.sh` on each laptop client
-    and replace "__user__" with the respective server-account
+    and replace "\_\_user\_\_" with the respective server-account
     (e.g. "`part08@cimserv.dept.university.tld`), and replace
-    "__instructor_home__" with the home directory of the instructor
+    "\_\_instructor_home\_\_" with the home directory of the instructor
     account on the server (e.g. `/home/instructor`).
 
 A helper script to set up participants' personal laptops in a more
