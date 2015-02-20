@@ -24,17 +24,33 @@ each client) are run from one virtual environment (*virtualenv*) on a
 central server. The setup exploits the web-based nature of the IPython
 Notebook in that the participants only interact with a browser.
 
+Alternatives
+------------
+
+More fancy solutions to the problem would likely involve
+[Docker](https://www.docker.com/),
+[jupyterhub](https://github.com/jupyter/jupyterhub) and/or
+[tmpnb](https://github.com/jupyter/tmpnb).
+
 Benefits
 --------
 
 + Little set-up time required.
 
++ The server-setup can be kept for the next course.
+
 + Additional modules for a course are installed once and become
   immediately accessible to all participants.
 
-+ The server-setup can be kept for the next course.
-
 + All participants work in exactly the same environment.
+
++ Apart from a system Python, and a Python virtual environment in a
+    user account, no additional software needs to be installed on the
+    server.
+
++ Client computers don't need Python/IPython Notebook installed at all.
+
++ Scales well to large numbers of clients.
 
 Drawbacks
 ---------
@@ -43,6 +59,8 @@ Drawbacks
   their laptops that would allow them to continue programming after
   the course. This could be remedied by offering an after-course
   installation event.
+
++ Not tested (yet) whether that works with Windows clients.
 
     
 
