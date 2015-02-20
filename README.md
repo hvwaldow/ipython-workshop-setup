@@ -2,6 +2,7 @@ Client-server setup for IPython-Notebook based courses
 ======================================================
 
  | <a href="#rationale">Rationale</a>
+  | <a href="#alternatives">Alternatives</a>
  | <a href="#benefits">Benefits</a>
  | <a href="#drawbacks">Drawbacks</a>
  | <a href="#quickstart">Quickstart</a>
@@ -28,7 +29,7 @@ Alternatives
 ------------
 
 More fancy solutions to the problem would likely involve
-[Docker](https://www.docker.com/),
+[Docker](https://www.docker.com/), 
 [jupyterhub](https://github.com/jupyter/jupyterhub) and/or
 [tmpnb](https://github.com/jupyter/tmpnb).
 
