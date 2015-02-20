@@ -30,7 +30,7 @@ Alternatives
 
 More fancy solutions to the problem would likely involve
 [Docker](https://www.docker.com/), 
-[jupyterhub](https://github.com/jupyter/jupyterhub) and/or
+ [jupyterhub](https://github.com/jupyter/jupyterhub) and/or
 [tmpnb](https://github.com/jupyter/tmpnb).
 
 Benefits
