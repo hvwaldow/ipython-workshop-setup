@@ -26,7 +26,7 @@ cd
 cd pyws
 virtualenv -p /usr/bin/python2.7 venv # check whether path to system Python is correct
 cd venv
-wget https://raw.githubusercontent.com/C2SM/ipython-workshop-setup/master/server/requirements.txt
+wget https://raw.githubusercontent.com/C2SM/ipython-workshop-setup/master/requirements.txt
 source bin/activate
 for pack in \$(cat requirements.txt); do pip install \$pack; done
 deactivate
